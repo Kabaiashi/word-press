@@ -1,5 +1,13 @@
 <?php
 
+/*
+Plugin Name: New Post Type and Taxonomy
+Description: Creates a new post type and a taxonomy
+Version: 1.0
+Author: Denys
+Text Domain: nptt
+*/
+
 /*Custom Post type start*/
 function post_type_real_estate_object() {
     $supports = array(
@@ -27,11 +35,12 @@ function post_type_real_estate_object() {
       'labels' => $labels,
       'public' => true,
       'query_var' => true,
-      'rewrite' => array('slug' => 'real-estate-objects'),
+      'rewrite' => array('slug' => 'objects'),
+      'menu_position' => 5,
       'has_archive' => true,
       'hierarchical' => false,
     );
-    register_post_type('news', $args);
+    register_post_type('re_objects', $args);
 }
 
 add_action('init', 'post_type_real_estate_object');
@@ -62,7 +71,7 @@ function create_districts_taxonomy() {
     ); 
  
     // Register the taxonomy like tag
-    register_taxonomy('Район','news',array(
+    register_taxonomy('Район','re_objects',array(
       'hierarchical' => false,
       'labels' => $labels,
       'show_ui' => true,
@@ -73,4 +82,5 @@ function create_districts_taxonomy() {
       'rewrite' => array( 'slug' => 'district' ),
     ));
 }
+
 ?>
