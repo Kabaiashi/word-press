@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: New Post Type and Taxonomy
+Plugin Name: Post Type and Taxonomy Init
 Description: Creates a new post type and a taxonomy
 Version: 1.0
 Author: Denys
@@ -39,6 +39,7 @@ function post_type_real_estate_object() {
       'menu_position' => 5,
       'has_archive' => true,
       'hierarchical' => false,
+      'menu_icon' => 'dashicons-admin-multisite',
     );
     register_post_type('re_objects', $args);
 }

@@ -1,33 +1,47 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WP_Bootstrap_Starter
- */
+<footer class="site-footer">
 
-?>
-<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div><!-- #content -->
-	</div><!-- .wrapper -->
-    <?php get_template_part( 'footer-widget' ); ?>
-	<footer id="colophon" class="site-footer navbar-fixed-bottom <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
-		<div class="container pt-3 pb-3">
-            <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
+    <div class="site-footer__inner container container--narrow">
 
-            </div><!-- close .site-info -->
-		</div>
-	</footer><!-- #colophon -->
-<?php endif; ?>
-</div><!-- #page -->
+      <div class="group">
+
+        <div class="site-footer__col-one">
+          <h1 class="school-logo-text school-logo-text--alt-color"><a href="<?php echo site_url() ?>"><strong>Real</strong> Estate</a></h1>
+        </div>
+
+        <div class="site-footer__col-two-three-group">
+          <div class="site-footer__col-two">
+            <h3 class="headline headline--small">Исследовать</h3>
+            <nav class="nav-list">
+			  <?php wp_nav_menu(); ?>
+            </nav>
+          </div>
+
+          <div class="site-footer__col-three">
+            <h3 class="headline headline--small">Узнать</h3>
+            <nav class="nav-list">
+              <ul>
+                <li><a href="<?php echo site_url('/privacy-policy') ?>">Конфиденциальность</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="site-footer__col-four">
+          <h3 class="headline headline--small">Связаться с нами</h3>
+          <nav>
+            <ul class="min-list social-icons-list group">
+              <li><a href="#" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#" class="social-color-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
 <?php wp_footer(); ?>
 </body>
