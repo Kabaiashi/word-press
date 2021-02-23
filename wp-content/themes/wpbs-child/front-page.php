@@ -6,7 +6,7 @@
     <div class="page-banner__content container t-center c-white">
       <h1 class="headline headline--large c-white">Добро пожаловать!</h1>
       <h2 class="headline headline--medium c-white">Мы думаем, Вам у нас понравится</h2>
-      <h3 class="headline headline--small c-white">Почему бы Вам не ознакомиться с <strong>тем</strong> что Вас интересует?</h3>
+      <h3 class="headline headline--small c-white">Почему бы Вам не ознакомиться с <strong>тем</strong>, что Вас интересует?</h3>
       <a href="#" class="btn btn--large btn-primary">Найдите это</a>
     </div>
   </div>
